@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# dependencies:
+# update.cfg (parameters with sensitive information)
+# update.ip (empty file)
+# read and write permissions in directory
+
+# Script that updates HE tunnel, useful when having external IP from DHCP
+
 cd "$(dirname "$0")" || exit;
 . update.cfg
 EX_IP=$(curl -s "ipecho.net/plain")
